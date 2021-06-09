@@ -1,0 +1,183 @@
+// Colors
+
+$atom-orange: #ff5000;
+$atom-clear-blue: #a5d3d4;
+$atom-white: #f9f8ea;
+$atom-black: #282828;
+$atom-grey: #212121;
+$atom-pink:#ff6784;
+$atom-yellow: #d6e150;
+$atom-blue: #52cad5;
+$atom-orange-2:#fe7f00;
+
+
+
+//Fonts
+// @import url(https://use.typekit.net/kps8ivm.css);
+// $font-title: 'sofia-pro', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Roboto+Slab&display=swap');
+$font-title: 'Roboto Slab', serif;
+$font-paragraph: 'IBM Plex Mono', monospace;
+
+
+
+
+* {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: $font-paragraph;
+    font-size: 1.8rem;
+    color: $atom-black;
+    margin: 0px;
+    overflow-x: hidden;
+
+    ::selection {
+        background-color: $atom-orange;
+        color: $atom-white;
+    }
+}
+
+.top-navbar {
+    font-size: 18px;
+    margin: 0px;
+    display: flex;
+    height: 50px;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+    .page-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    a {
+        padding-left: 30px;
+
+    }
+    .top-navbar-right {
+        display: flex;
+        a {
+            justify-content: space-around;
+            padding-right: 30px;
+        }
+    }
+}
+
+
+.navigation {
+    top: 30px;
+    right: 30px;
+}
+.navbutton {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: $atom-black;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    &:active {
+        transform:rotate(45deg);
+        animation-fill-mode: forwards;
+        
+        
+    }
+}
+
+button {
+    background: 0;
+    border: 0;
+
+} 
+.landing {
+width: 100%;
+/* whatever width you want */
+display: inline-block;
+position: relative;
+background-size: contain;
+background: url('../images/bus_2_800.jpg') top center no-repeat;
+margin: 0 auto;
+}
+.landing:after {
+padding-top: 49.125%;
+/* this llama image is 800x600 so set the padding top % to match 600/800 = .75 */
+display: block;
+content: '';
+}
+.main {
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+color: black;
+text-align: center;
+margin-top: 5%;
+}
+// .landing {
+//     background-image: url("../images/bus_2_800.jpg");
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     height: 100%;
+//     color: #ffffff;
+// }
+
+/* setup */
+
+  
+.container {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+  }
+ 
+  .container.y {
+    height: 256px;
+    flex-flow: column nowrap;
+  }
+  /* scroll-snap */
+
+  .y.mandatory-scroll-snapping {
+    scroll-snap-type: y mandatory;
+  }
+   
+  .container > div {
+    text-align: center;
+    scroll-snap-align: center;
+    flex: none;
+  }
+
+  .y.container > div {
+    line-height: 256px;
+    font-size: 128px;
+    height: 100%;
+    &.pink {
+        background-color: $atom-pink;
+    }
+    &.yellow {
+        background-color: $atom-yellow;
+    }
+    &.blue {
+        background-color: $atom-blue;
+    }
+    &.orange {
+        background-color: $atom-orange;
+    }
+    &.grey {
+        color:$atom-blue;
+        background-color: $atom-grey;
+    }
+  }
+
+footer {
+    display: flex;
+    justify-content: center;
+    height: 800px;
+}
